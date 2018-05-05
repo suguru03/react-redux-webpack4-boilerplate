@@ -1,14 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Root from './router/Root';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Root />
-      </div>
-    );
-  }
-}
+const App = () => <Root />;
 
 export default App;

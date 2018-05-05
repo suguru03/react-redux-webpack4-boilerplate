@@ -4,17 +4,16 @@ import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import store from '../redux/store';
 
-import { Home, About } from '../containers';
+import App from '../components/App';
 
 class Root extends Component {
   render() {
-    console.log(store);
+    console.log('store', store);
     return (
       <Provider store={store}>
         <Router>
           <div>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route path="/:filter?" component={App} />
           </div>
         </Router>
       </Provider>
